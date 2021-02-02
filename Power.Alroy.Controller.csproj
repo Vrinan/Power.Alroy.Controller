@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4C68C35-3455-4EFB-A5C5-CBEC739096AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Power.Alroy.Controller</RootNamespace>
+    <AssemblyName>Power.Alroy.Controller</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewLife.Core">
+      <HintPath>..\..\Site\Standard\PowerPMS\bin\NewLife.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Site\Standard\PowerPMS\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Power.Business">
+      <HintPath>..\..\Site\Standard\PowerPMS\bin\Power.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Power.Controls">
+      <HintPath>..\..\Site\Standard\PowerPMS\bin\Power.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Power.Global">
+      <HintPath>..\..\Site\Standard\PowerPMS\bin\Power.Global.dll</HintPath>
+    </Reference>
+    <Reference Include="Power.IBaseCore">
+      <HintPath>..\..\Site\Standard\PowerPMS\bin\Power.IBaseCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Power.ISystems">
+      <HintPath>..\..\Site\Standard\PowerPMS\bin\Power.ISystems.dll</HintPath>
+    </Reference>
+    <Reference Include="Power.Service">
+      <HintPath>..\..\Site\Standard\PowerPMS\bin\Power.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Power.Service.Files">
+      <HintPath>..\..\Site\Standard\PowerPMS\bin\Power.Service.Files.dll</HintPath>
+    </Reference>
+    <Reference Include="Power.Systems">
+      <HintPath>..\..\Site\Standard\PowerPMS\bin\Power.Systems.dll</HintPath>
+    </Reference>
+    <Reference Include="Power.WorkFlows">
+      <HintPath>..\..\Site\Standard\PowerPMS\bin\Power.WorkFlows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>Reference bin\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="XCode">
+      <HintPath>..\..\Site\Standard\PowerPMS\bin\XCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonFunction.cs" />
+    <Compile Include="MailHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QRcode.cs" />
+    <Compile Include="AlroyLogin.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
