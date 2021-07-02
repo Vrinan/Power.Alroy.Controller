@@ -77,19 +77,7 @@ namespace Power.Alroy.Controller
         #endregion
 
         #region 设定/获取Cache
-        public void setCache()
-        {
-            //设置
-            PowerGlobal.Cache.Set("BIMGISSmsAccessToken", Convert.ToString("result"));
-            PowerGlobal.Cache.ExpireAt("BIMGISSmsAccessToken", DateTime.Now.AddSeconds(86000));
-
-            //获取token
-            var accessToken = PowerGlobal.Cache.Get<String>("BIMGISSmsAccessToken");
-            if (string.IsNullOrEmpty(accessToken))
-            {
-                //accessToken = GetAccessToken();
-            }
-        }
+\
         #endregion
 
         #region 通用记录日志方法
@@ -211,6 +199,7 @@ namespace Power.Alroy.Controller
             return DateTime.Now.ToString("yyyy-MM-dd");
         }
 
+
         /// <summary>
         /// 删除流程
         /// </summary>
@@ -249,7 +238,7 @@ namespace Power.Alroy.Controller
             }
         }
         #endregion
-
+        Power.Business.IBaseBusiness bbs = Power.Business.BusinessFactory.CreateBusinessOperate("KeyWord").FindByKey(this.Id);
         #region 发送邮件
         /// <summary>
         /// 发送邮件
